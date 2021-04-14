@@ -15,6 +15,9 @@ app.use(cors());
 app.use("/api/auth/jwt", require("./routes/auth/jwt"));
 app.use("/api/auth/google", require("./routes/auth/google"));
 app.use("/api/auth/facebook", require("./routes/auth/facebook"));
+app.use("/api/producto/tarjeta", require("./routes/productos/tarjeta"));
+app.use("/api/producto/prestamo", require("./routes/productos/prestamo"));
+app.use("/api/producto/segurovida", require("./routes/productos/segurovida"));
 
 app.listen(PORT, () => {
   console.log(`Server running @ ${PORT}`);
