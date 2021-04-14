@@ -2,26 +2,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ClienteSchema = new Schema({
-  uid: {
-    type: String,
-    unique: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
   dni: {
     type: String,
-    unique: true,
+    required: true,
   },
   email: {
     type: String,
     required: true,
     unique: true,
-  },
-  pic: {
-    type: String,
-    required: false,
   },
   productos: [
     {
@@ -35,9 +23,15 @@ const ClienteSchema = new Schema({
       },
     },
   ],
-  password: {
+  edad: {
+    type: Number,
+    required: true,
+  },
+  operador: {
     type: String,
-    required: false,
+  },
+  celular: {
+    type: String,
   },
   date: {
     type: Date,

@@ -17,8 +17,8 @@ router.get(
 router.get(
   "/callback",
   passport.authenticate("facebook", {
-    successRedirect: "/",
-    failureRedirect: "/login",
+    successRedirect: "http://localhost:8080/",
+    failureRedirect: "http://localhost:8080/login",
   }),
   (req, res) => {
     //if (!req.user) return res.status(400).json({ error: "Failed login" });
