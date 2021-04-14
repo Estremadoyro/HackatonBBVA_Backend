@@ -21,7 +21,7 @@ router.get(
     failureRedirect: "/login",
   }),
   (req, res) => {
-    if (!req.user) return res.status(400).json({ error: "Failed login" });
+    //if (!req.user) return res.status(400).json({ error: "Failed login" });
     res.status(200).json({ cliente: req.user });
   }
 );

@@ -44,8 +44,8 @@ passport.use(
   new FacebookStrategy(
     {
       clientID: "907674410064551",
-      clientSecret: "f4e960f7ad17576ed12e7b1b56fa54d5",
-      callbackURL: "http://localhost:5000/api/auth/facebook/callback",
+      clientSecret: "4d65205cc6831f3bf41bb9529ab76de6",
+      callbackURL: "/api/auth/facebook/callback",
       profileFields: ["id", "displayName", "name", "gender", "picture.type(large)", "email"],
     },
     function (accessToken, refreshToken, profile, done) {
