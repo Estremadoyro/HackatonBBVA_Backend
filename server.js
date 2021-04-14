@@ -6,12 +6,15 @@ const PORT = process.env.PORT || 5000;
 const connectDB = require("./db");
 
 //DB Connection
-connectDB();
+connectDB(mongoose.connect(config.DB,{ useNewUrlParser: true }));
+
 
 //Middleware
 app.use(express.json({ extended: false }));
 app.use(cors());
 //Routes
+
+app.use("/api/auth/jwt", require("./routes/auth/jwt"));
 app.use("/api/auth/jwt", require("./routes/auth/jwt"));
 app.use("/api/auth/google", require("./routes/auth/google"));
 app.use("/api/auth/facebook", require("./routes/auth/facebook"));
